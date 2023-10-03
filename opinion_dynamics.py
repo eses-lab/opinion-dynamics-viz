@@ -34,3 +34,24 @@ class AgentPopulation:
             individual_agent = Agent(i, opinions) # Create a new Agent object with the generated opinions.
             self.agent_list.append(individual_agent) # Add the new Agent object to the agent_list
 
+    
+    # The influence factor is a constant ranging from 0 to 1, indicating the strength of interaction between agents.
+    # Higher values result in greater shifts in opinion following an interaction.
+
+    # In the Deffuant model, two agents interact and compare their opinions.
+    # Agents will only influence each other if their opinion difference is below a certain threshold.
+
+    # The opinion of each agent is updated based on the influence factor, according to the following formula:
+    # New Opinion of Agent A = Old Opinion of Agent A + Influence Factor * (Old Opinion of Agent B - Old Opinion of Agent A)
+    # New Opinion of Agent B = Old Opinion of Agent B + Influence Factor * (Old Opinion of Agent A - Old Opinion of Agent B)
+
+    # The `evolve` method will implement these opinion updates, using the influence factor to modify opinions when the conditions are met.
+
+    def evolve(self, number_of_iterations, opinion_diff_threshold, influence_factor):
+
+        for _ in range(number_of_iterations):
+            agent1 = random.choice(self.agent_list)
+            agent2 = random.choice(self.agent_list)
+
+            
+

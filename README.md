@@ -26,14 +26,21 @@ The primary goal is to study and visualize the intricate process of opinion dyna
    - Acts as the central hub for the project, allowing users to generate, study, and visualize opinion dynamics, adjust model parameters, and gain insights into the opinion evolution process.
 
 ## Theoretical Context
-The project's theoretical foundation is based on models from computational social science studying opinion dynamics, such as the Deffuant Model and Hegselmann-Krause Model, to simulate how opinions evolve through interactions over time.
+The project's theoretical foundation is based on models from computational social science studying opinion dynamics, such as the Deffuant Model and Hegselmann-Krause Model, to simulate how opinions evolve through interactions over time. V1 is built with the Deffuant Model.
+
+Deffuant Model 
+The Deffuant Model works as follows:
+
+- At each time step, two agents are randomly selected.
+- If the difference in their opinions is smaller than a certain threshold, they will influence each other.
+- They adjust their opinions towards each other by a fixed percentage.
+
 
 ## Usage
 1. Clone the repository to your local machine.
 2. Navigate to the project directory and launch the Jupyter notebook (`opinion_dynamics_notebook.ipynb`).
 3. Run the cells to initialize the model, simulate interactions, and visualize the results.
    
-_TODO: Add more detailed steps, GIFs or screenshots once the project is complete._
 
 ## Built With
 - Python
